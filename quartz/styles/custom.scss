@@ -1,3 +1,126 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
-// put your custom CSS here!
+// 淡绿色主题
+:root {
+  --light-green: #e8f5e9;
+  --primary-green: #81c784;
+  --dark-green: #4caf50;
+  --text-color: #2e7d32;
+  --link-hover: #1b5e20;
+}
+
+body {
+  background-color: var(--light-green);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+  position: relative;
+  text-decoration: none;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  line-height: inherit !important;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(129, 199, 132, 0.3);
+    z-index: -1;
+    transition: height 0.2s ease;
+  }
+  
+  &:hover {
+    color: var(--link-hover) !important;
+    background-color: transparent !important;
+    
+    &::after {
+      height: 100%;
+    }
+  }
+  
+  &.internal {
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    line-height: inherit !important;
+  }
+}
+
+// 特别处理标题链接
+h1, h2, h3, h4, h5, h6 {
+  a {
+    color: inherit;
+    
+    &::after {
+      height: 30%;
+      bottom: 5%;
+    }
+    
+    &:hover::after {
+      height: 90%;
+    }
+  }
+}
+
+// 特别处理导航链接
+.breadcrumb-container a,
+nav a,
+.explorer a {
+  &::after {
+    height: 40%;
+    bottom: 0;
+  }
+  
+  &:hover::after {
+    height: 100%;
+  }
+}
+
+// 按钮和交互元素
+button, .btn {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-1px);
+  }
+}
+
+// 卡片和内容区块
+.content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+  
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+}
+
+// 导航菜单
+nav {
+  a {
+    padding: 8px 12px;
+    border-radius: 4px;
+    
+    &:hover {
+      background-color: rgba(129, 199, 132, 0.2);
+      text-decoration: none;
+    }
+  }
+}
