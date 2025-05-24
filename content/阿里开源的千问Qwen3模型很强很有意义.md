@@ -25,9 +25,9 @@ Github Repo: [http://github.com/QwenLM/Qwen3](http://github.com/QwenLM/Qwen3)
 ## Qwen3的意义在哪儿？我的看法
 我是开源技术派，也非常在意数据隐私保护。
 - Qwen2.5-32B一直是我本地任务的主力，因为它不论生成代码的能力、使用工具的能力、对中文的支持，综合比较下来是最好的！是本地智能体的智力中枢！
-- 经过DeepSeek蒸馏的R1-qwen-70B是能在本地电脑跑起来的最好的推理模型。
+- 经过DeepSeek蒸馏的R1-qwen-70B是能在本地电脑跑起来的最好的推理模型。(据说QwQ也可，没试过)
 - Qwen系列的小尺寸模型被开源社区广泛用在语音生成类任务中，对世界的贡献不为外行所知。
-- Qwen2.5-vl-72B在视觉任务的能力让人惊讶，不比Google Gemma3-72B差。
+- Qwen2.5-vl-72B在视觉任务的能力让人惊讶，比Google Gemma3-27B强。
 - Qwen2.5-code-32B用来驱动依赖编程能力的AI Agent框架效果不错。
 - Qwen-audio支撑的语音生成和语音识别被国内很多项目拿来做虚拟人。
 
